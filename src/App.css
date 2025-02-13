@@ -1,0 +1,186 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #031318; /* Dark background */
+  color: #fff;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+.navbar .active {
+  border-bottom: 2px solid #00bcd4;
+}
+
+/* Container for Steps */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+/* Title Styling */
+.title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+/* Ticket Selection Buttons */
+.ticket-options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.ticket-options button {
+  padding: 10px 15px;
+  border: 1px solid #00bcd4;
+  background: transparent;
+  color: #00bcd4;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ticket-options button:hover {
+  background: #00bcd4;
+  color: #fff;
+}
+
+.drop-zone {
+  border: 2px dashed #4caf50;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+}
+
+.drop-zone.dragging {
+  background-color: #2a2a2a;
+  border-color: #00ff99;
+}
+
+.drop-zone input {
+  display: none;
+}
+
+.preview-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: 2px solid #4caf50;
+}
+
+
+/* Input Fields */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #00bcd4;
+  color: #fff;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* File Upload */
+.upload-box {
+  border: 2px dashed #00bcd4;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.upload-box:hover {
+  background: rgba(0, 188, 212, 0.1);
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.next-btn {
+  background: #00bcd4;
+  color: #031318;
+  transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+  background: #0288d1;
+}
+
+/* Ticket Confirmation */
+.ticket-card {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.ticket-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ticket-options {
+    flex-direction: column;
+  }
+}
