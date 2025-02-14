@@ -1,21 +1,17 @@
 import React from "react";
 
-function TicketConfirmation({ formData, onBack }) {
+const TicketConfirmation = ({ ticket }) => {
   return (
     <div className="container">
-      <h2 className="title">Your Ticket is Booked!</h2>
-      <div className="ticket-card">
-        {formData.uploadedImage && <img src={formData.uploadedImage} alt="Uploaded" />}
-        <h3>{formData.ticketType} Ticket</h3>
-        <p>Name: {formData.name}</p>
-        <p>Email: {formData.email}</p>
-        <p>Special Request: {formData.specialRequest}</p>
+      <h2>Your Ticket is Booked!</h2>
+      <div className="ticket">
+        <img src={ticket.avatar} alt="Avatar" />
+        <h3>{ticket.name}</h3>
+        <p>{ticket.email}</p>
       </div>
-      <div className="button-container">
-        <button onClick={onBack}>Book Another Ticket</button>
-      </div>
+      <button onClick={() => window.print()}>Download Ticket</button>
     </div>
   );
-}
+};
 
 export default TicketConfirmation;
